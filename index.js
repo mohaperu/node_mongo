@@ -5,7 +5,7 @@ import dotenv from "dotenv"
 const app = express();
 
 dotenv.config();
-const PORT = 5000;
+const PORT = process.env.PORT;
 
 //Tell expresswhat format data you are going to get - json, xml, text
 //middleware - gatekeeper
