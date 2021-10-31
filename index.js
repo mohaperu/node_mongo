@@ -6,8 +6,7 @@ import { managerRouter } from './routes/manager.js';
 import { usersRouter } from './routes/users.js';
 import { moviesRouter } from './routes/movies.js';
 import cors from "cors";
-//fetch has been blocked from cors that why we installing a package cors 
-app.use(cors());
+
 
 const app = express();
 
@@ -21,7 +20,8 @@ const PORT = process.env.PORT;
 //middleware - gatekeeper
 //all the request  - body - will be converted to JSON
 app.use(express.json()); //inbuild middleware
-
+//fetch has been blocked from cors that why we installing a package cors 
+app.use(cors());
 
 //To know the env files is uploaded or not
 //console.log(process.env);
