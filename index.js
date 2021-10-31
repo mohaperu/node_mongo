@@ -5,6 +5,9 @@ import dotenv from "dotenv";
 import { managerRouter } from './routes/manager.js';
 import { usersRouter } from './routes/users.js';
 import { moviesRouter } from './routes/movies.js';
+import cors from "cors";
+//fetch has been blocked from cors that why we installing a package cors 
+app.use(cors());
 
 const app = express();
 
